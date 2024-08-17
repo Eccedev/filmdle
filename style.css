@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Roboto, Montserrat,'Verdana', 'Helvética', sans-serif, 'Arial', 'consolas';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #575a8b;
+}
+
+/* contenedorres */
+
+.contenedor-ppal {
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally 1  */
+  gap: 1rem;
+}
+
+.contenedor-second {
+  top: 0;
+  background-color: #ffd700;
+  left: 0;  /* Posicionamiento desde el lado izquierdo */
+  right: 0;  /* Ocupa todo el ancho disponible */
+  margin: 0 auto;  /* Centra horizontalmente */
+  padding-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.contenedor-third {
+  flex-direction: column;
+  /* Los elementos hijos se apilarán verticalmente */
+  align-items: flex-start;
+  /* Alineamos los elementos al inicio (izquierda) */
+  width: 100%;
+  justify-content: center;  
+}
+.contenedor-third::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #f0f0f0;
+}
+.contenedor-third::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+.contenedor-third {
+  overflow-x: auto;
+  max-height: 100vh; /* Ajusta este valor según tus necesidades */
+  overflow-y: auto;
+}
+
+
+/* empieza contenedor-second */
+.titulo {
+  text-align: center;
+}
+
+.vidas {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+}
+
+.board-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 5px 0;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guess-input {
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.guess-input:focus {
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  /* Centra los botones horizontalmente */
+  gap: 10px;
+  /* Espacio entre los botones */
+  margin-top: 1rem;
+}
+
+.btn-guess,
+.btn-reset,
+.btn-hint {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guess {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #ff3728;
+  color: white;
+}
+
+.btn-hint {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-guess:hover,
+.btn-reset:hover,
+.btn-hint:hover {
+  background-color: #233d23;
+}
+
+.move-r-l {
+  position: relative;
+  background-color: whitesmoke;
+  text-align: center;
+  margin-top: 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.close-move {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  /*font-weight: bold;*/
+  padding: 6px;
+  opacity: 0.9;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+}
+
+.izquierda {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: rgb(113, 196, 252);
+  padding: 0 2px 2px 2px;
+}
+
+.derecha {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: rgb(113, 196, 252);
+  padding: 0 2px 2px 2px;
+}
+
+.subir {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: rgb(113, 196, 252);
+  padding: 0 2px 2px 2px;
+}
+
+.bajar {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: rgb(113, 196, 252);
+  padding: 0 2px 2px 2px;
+}
+
+
+/* empieza estilos dentro contenedor-third  */
+.tabla-info {
+  width: 100%;
+  height: auto;
+  padding: 0rem;  
+  background-color: #8981fd;
+  border: 4px solid black;
+  border-radius: 5px; 
+}
+
+
+.tabla {
+  background-color: #ffd700;
+}
+
+.celda {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 1px 3px;
+}
+
+
+
+/*indicadores de significado de colores*/
+#indicadores {
+  border: 3px solid black;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  position: relative;  /*necesario para estilo .close*/
+  margin-top: 1rem;
+}
+
+.close-colores {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 6px;
+  opacity: 0.9;
+  cursor: pointer;
+  border: 1px solid #ffd700;
+}
+
+.indicador {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  position: relative;
+}
+
+.indicador-texto {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+.indicador-columna {
+  margin: 0 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+} 
+
+.correcto {
+  background-color: #00FF00;
+}
+
+.parcial {
+  background-color: yellow;
+}
+
+.incorrecto {
+  background-color: #FF3728;
+}
+
+.mas-alto {
+  background-color: rgba(139, 0, 0, 0.596);
+}
+
+.mas-bajo {
+  background-color: rgba(139, 0, 0, 0.596);
+}
+
+.flecha-up, .flecha-down {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+
+/* media 900px */
+@media (min-width: 1200px) {
+  .move-r-l {
+    display: none;
+  }
+}
+

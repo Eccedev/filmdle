@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <meta name="description" content="página web de un gamedle de adivinar película">
+    <meta name="keywords" content="película, serie, palabra clave 3, ...">
+    <meta property="og:title" content="Título para compartir en redes sociales">
+    <meta property="og:description" content="Descripción para compartir en redes sociales">
+    <meta property="og:image" content="imagen-para-compartir.jpg"> 
+    <meta property="og:title" content="top100filmdle">
+    <meta property="og:description" content="Un gamedle de película">
+    <meta property="og:image" content="imagen-para-compartir? .jpg u otro> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>top100filmdle</title>
+</head>
+
+<body>
+    <div class="contenedor-ppal">
+
+        <div class="contenedor-second">
+            <h1 class="titulo">Top100filmDle</h1>
+
+            <div id="livesDiv" class="vidas">Vidas restantes: <br><span id="lives">❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</span></div>
+
+            <div id="board" class="board-input">
+                <input type="text" id="guess" class="guess-input" list="manga-titles" placeholder="Adivina la película">
+                <datalist id="manga-titles" class="lista-opciones">
+                    <!-- This will be populate by JavaScript -->
+                </datalist>
+            </div>
+
+            <div class="botones">
+                <button onclick="checkGuess()" id="guessButton" class="btn-guess">Adivina</button>
+                <button onclick="resetGame()" id="resetButton" class="btn-reset">Reinicia</button>
+                <button id="hintButton" onclick="giveHint()" class="btn-hint">Pista</button>
+            </div>
+
+            <div class="move-r-l">
+                <span class="close-move">X</span>
+                <p> Si lo necesitas desplázate</p>
+                <p><span class="izquierda">&#8592</span> izquierda-derecha <span class="derecha">&#8594</span></p>
+                <p><span class="subir">&#8593</span> arriba-abajo <span class="bajar">&#8595</span></p>
+            </div>
+        </div>
+
+        <div class="contenedor-third">
+            <table id="infoTable" class="tabla-info">
+                <thead class="tabla">
+                    <tr class="fila">
+                        <th class="celda celda-0">Img</th>
+                        <th class="celda celda-1">Title</th>
+                        <th class="celda celda-2">Year</th>
+                        <th class="celda celda-3">Status</th>
+                        <th class="celda celda-4">Description</th>
+                        <th class="celda celda-5">Genre</th>
+                        <th class="celda celda-6">Serie</th>
+                        <th class="celda celda-7">Director</th>
+                        <th class="celda celda-8">Actors</th>
+                    </tr>
+                </thead>
+                <tbody id="tb-scroll" class="tb-result custom-scrollbar">
+                    <!-- Entries will go here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="indicadores">
+            <span class="close-colores">X</span>
+            <div class='indicador-columna'>
+                <div class="indicador correcto"></div>
+                <div class="indicador-texto">Correcto</div>
+            </div>
+            <div class='indicador-columna'>
+                <div class="indicador parcial"></div>
+                <div class="indicador-texto">Parcial</div>
+            </div>
+            <div class='indicador-columna'>
+                <div class="indicador incorrecto"></div>
+                <div class="indicador-texto">Incorrecto</div>
+            </div>
+            <div class='indicador-columna'>
+                <div class="indicador mas-alto"><span class="subir flecha-up">&#9650</span></div>
+                <div class="indicador-texto">Más alto</div>
+            </div>
+            <div class='indicador-columna'>
+                <div class="indicador mas-bajo"><span class="bajar flecha-down">&#9660</span></div>
+                <div class="indicador-texto">Más bajo</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
