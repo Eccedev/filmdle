@@ -307,6 +307,14 @@ body {
   background-color: white;
 }
 
+footer {
+  color: #fff;
+}
+
+.a-eccedev {
+  color: #ffd700;
+  text-decoration: none;
+}
 
 /* media 900px */
 @media (min-width: 1200px) {
