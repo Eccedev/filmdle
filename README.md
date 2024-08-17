@@ -1,6 +1,11 @@
+
+![filmdle](https://github.com/user-attachments/assets/9d1f67ad-660f-4dd8-99c5-c14ab07ae777)
+
+# link
+Puedes probar este juego en https://topfilmdle.vercel.app/
 # autor 
-https://github.com/Eccedev made this web-app from a boiler gamedle
+https://github.com/Eccedev realizó esta web-ap desde un boiler gamedle
 
 # gamedle
-proyect from idea at https://mangaguess.netlify.app/page.html
+La idea del proyecto viene de https://mangaguess.netlify.app/page.html
 
