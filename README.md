@@ -4,7 +4,7 @@
 # link
 Puedes probar este juego en https://topfilmdle.vercel.app/
 # autor 
-https://github.com/Eccedev realizó esta web-ap desde un boiler gamedle
+https://github.com/Eccedev realizó esta web-app desde un boiler gamedle
 
 # gamedle
 La idea del proyecto viene de https://mangaguess.netlify.app/page.html
